@@ -45,7 +45,7 @@ The dashboard is interactive and allows users to filter by key metrics
 2. Trends in sales over time.  
 3. MRP vs. Sales insights.  
 
-![Dashboard Screenshot](Images/dashboard_screenshot.png)  
+![Dashboard Screenshot](BIGMART2.png)  
 
 
 
