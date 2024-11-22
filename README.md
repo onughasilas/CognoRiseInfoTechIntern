@@ -47,6 +47,18 @@ The dashboard is interactive and allows users to filter by key metrics
 
 ![Dashboard Screenshot](BIGMART2.png)  
 
+## Insights and Recommendations  
+### Insights:  
+1. Medium-sized outlets outperform others in sales.  
+2. Low-fat items have higher sales than regular-fat items.  
+3. Supermarket Type 3 is the leading sales contributor.  
+4. Low-visibility items surprisingly outperform high-visibility items.  
+
+### Recommendations:  
+1. Expand medium-sized outlets for higher sales potential.  
+2. Focus marketing efforts on low-fat items.  
+3. Investigate and optimize product placement strategies for low-visibility items.  
+
 
 
 
