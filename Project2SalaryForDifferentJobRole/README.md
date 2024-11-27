@@ -446,9 +446,9 @@ From the analysis and visualizations, I was able to make some insightful recomme
 The data analysis and visualizations provided valuable insights into various aspects of the salary landscape across different job titles, experience levels, company sizes, and remote work opportunities. 
 ## THE KEY FINDING:
 
-** Certain job titles and experience levels command higher salaries, with senior-level positions earning more on average.
-** Remote work has become an increasingly significant factor in salary determination.
-** Company size, location, and employee experience level directly impact salary distribution and should be factored into compensation strategies.
-** A strong salary structure aligned with market trends can help organizations attract and retain top talent, ensuring competitiveness in the job market.
+- Certain job titles and experience levels command higher salaries, with senior-level positions earning more on average.
+- Remote work has become an increasingly significant factor in salary determination.
+- Company size, location, and employee experience level directly impact salary distribution and should be factored into compensation strategies.
+- A strong salary structure aligned with market trends can help organizations attract and retain top talent, ensuring competitiveness in the job market.
 
 
