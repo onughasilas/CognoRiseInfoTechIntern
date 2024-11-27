@@ -1,14 +1,14 @@
-# Data Analysis of Data Science Job Salaries  
+#  PROJECT TITLE: EMPLOYEE SALARIES FOR DIFFERENT JOB ROLES 
 
-## Project Overview  
-This project explores salary trends for data science roles using a dataset sourced from Kaggle and provided by CoongnoRise Infotech. The goal of the project was to analyze salaries based on job titles, experience levels, company sizes, and remote work ratios to extract meaningful insights and provide actionable recommendations.  
+## PROJECT OVERVIEW  
+This project explores salary trends for different job roles using a dataset sourced from Kaggle and provided by CoongnoRise Infotech. The goal of the project is to analyze salaries based on job titles, experience levels, company sizes, and remote work ratios to extract meaningful insights and provide actionable recommendations.  
 
 The analysis was performed using **R** and documented in **R Markdown**, showcasing my data manipulation, analysis, and visualization skills as part of my internship.  
 
 ---
 
-## Dataset  
-The dataset, *Data Science Salaries*, contains job-related information such as salaries (in USD), experience levels, company sizes, and remote ratios. It was downloaded from Kaggle and contains the following:  
+## DATASET  
+The dataset, *Employee Salaries for different job roles*, contains job-related information such as salaries (in USD), experience levels, company sizes, and remote ratios etc. It was downloaded from Kaggle with a link provided by ComgnoRise Infotech and contains the following:  
 - **Rows:** 10,000  
 - **Columns:** 12  
 - **Features:**  
@@ -18,11 +18,11 @@ The dataset, *Data Science Salaries*, contains job-related information such as s
   - Company Size  
   - Salary in USD, etc.  
 
-**Note:** The dataset is proprietary and cannot be shared publicly.  
+[Download the Dataset from Kaggle](https://www.kaggle.com/datasets/inductiveanks/employee-salaries-for-different-job-roles)  
 
 ---
 
-## Tools and Techniques Used  
+## TOOLS AND TECHNIQUES USED 
 - **Programming Language:** R  
 - **Libraries:** `dplyr`, `ggplot2`, `tidyverse`  
 - **Steps:**  
@@ -33,10 +33,10 @@ The dataset, *Data Science Salaries*, contains job-related information such as s
 
 ---
 
-## Process  
+## PROCESS 
 
-### 1. **Data Loading**  
+### 1. **DATA LOADING**  
 The dataset was loaded into R using the `read.csv()` function:  
 ```r
-DsSalaries <- read.csv("path/to/ds_salaries.csv")
+DsSalaries <- read.csv("C:/Users/Administrator/Documents/ds_salaries.csv", header = TRUE, stringsAsFactors = FALSE)
 head(DsSalaries)
