@@ -1,4 +1,4 @@
-# Data Analysis of Data Science Job Salaries  
+# Data Analysis of Salary Of Different Job Roles  
 
 ## Project Overview  
 This project explores salary trends for data science roles using a dataset sourced from Kaggle and provided by CoongnoRise Infotech.
