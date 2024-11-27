@@ -242,3 +242,184 @@ avg_salary_by_company_size
 
 ```
 (IX) Salary Distribution by Remote Ratio
+```{r}
+avg_salary_by_remote_ratio <- DsSalaries %>%
+    group_by(remote_ratio) %>%
+    summarise(AverageSalary = mean(salary_in_usd, na.rm = TRUE)) %>%
+    arrange(desc(AverageSalary))
+avg_salary_by_remote_ratio
+
+```
+(X) The highest Paying Companies
+
+```{r}
+highest_paying_companies <- DsSalaries %>%
+    group_by(company_location) %>%
+    summarise(AverageSalary = mean(salary_in_usd, na.rm = TRUE)) %>%
+    arrange(desc(AverageSalary))
+highest_paying_companies
+```
+
+  
+STEP19: VISUALIZATION
+
+```{r}
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(data = DsSalaries) +
+  geom_histogram(
+    mapping = aes(x = salary_in_usd), 
+    fill = "steelblue", 
+    binwidth = 1000,  # Specify bin width
+    color = "black"
+  ) +
+  labs(
+    title = "Distribution of Salaries",
+    subtitle = "Ds_salary",
+    caption = "Source: Ds_salaries",
+    x = "Salary in usd",
+    y = "Frequency"
+  )
+
+# Trying to facet the graph for more clarity
+ggplot(data = DsSalaries) +
+  geom_histogram(
+    mapping = aes(x = salary_in_usd), 
+    fill = "steelblue", 
+    binwidth = 10000, 
+    color = "black"
+  ) +
+  facet_wrap(~experience_level, scales = "free_y") +
+  labs(
+    title = "Distribution of Salaries by Experience Level",
+    caption = "Source: Ds_salaries",
+    x = "Salary in USD",
+    y = "Frequency"
+  )
+
+```
+
+(I) PLOTING THE AVERAGE SALARY BY JOB TITLE
+```{r}
+ggplot(data = avg_salary_by_job) +
+  geom_bar(
+    mapping = aes(x = reorder(job_title, -AverageSalary), y = AverageSalary), 
+    stat = "identity", 
+    fill = "steelblue"
+  ) +
+  labs(
+    title = "Average Salary by Job Title",
+    subtitle = "Sorted in Descending Order",
+    caption = "Source: DsSalaries",
+    x = "Job Title",
+    y = "Average Salary (USD)"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Rotate x-axis labels
+
+```
+(II) REMOT RATIO VS SALARY
+```{r}
+ggplot(data = DsSalaries) +
+  geom_boxplot(
+    mapping = aes(x = factor(remote_ratio), y = salary_in_usd), 
+    fill = "steelblue"
+  ) +
+  labs(
+    title = "Remote Ratio vs Salary",
+    subtitle = "Ds_salaries",
+    caption = "Source: Ds_salaries",
+    x = "Remote Ratio",
+    y = "Salary in USD"
+  )
+
+```
+
+(III) Count of Employees by Job Title
+```{r}
+# 1. Count of Employees by Job Title
+employee_count_by_job <- DsSalaries %>%
+  count(job_title, name = "EmployeeCount")
+
+ggplot(data = employee_count_by_job) +
+  geom_bar(mapping = aes(x = reorder(job_title, -EmployeeCount), y = EmployeeCount, fill = job_title), stat = "identity") +
+  labs(
+    title = "Count of Employees by Job Title",
+    x = "Job Title",
+    y = "Number of Employees"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "none") 
+```
+(IV) MININUM AND MXIMUM SALARY BY JOB TITLE
+```{r}
+min_max_salary_by_job <- DsSalaries %>%
+  group_by(job_title) %>%
+  summarise(
+    MinSalary = min(salary_in_usd, na.rm = TRUE),
+    MaxSalary = max(salary_in_usd, na.rm = TRUE)
+  )
+
+ggplot(data = min_max_salary_by_job) +
+  geom_segment(aes(x = job_title, xend = job_title, y = MinSalary, yend = MaxSalary), color = "blue") +
+  geom_point(aes(x = job_title, y = MinSalary), color = "red", size = 3) +
+  geom_point(aes(x = job_title, y = MaxSalary), color = "green", size = 3) +
+  labs(
+    title = "Minimum and Maximum Salary by Job Title",
+    x = "Job Title",
+    y = "Salary (USD)"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+(V) Count of Employees by Experience Level
+```{r}
+employee_count_by_experience <- DsSalaries %>%
+  count(experience_level, name = "EmployeeCount")
+
+ggplot(data = employee_count_by_experience) +
+  geom_bar(mapping = aes(x = reorder(experience_level, -EmployeeCount), y = EmployeeCount, fill = experience_level), stat = "identity") +
+  labs(
+    title = "Count of Employees by Experience Level",
+    x = "Experience Level",
+    y = "Number of Employees"
+  ) +
+  theme_minimal() 
+```
+(V) company size by salary
+```{r}
+ggplot(data = DsSalaries, aes(x = company_size, y = salary_in_usd, fill = company_size)) +
+  geom_boxplot() +
+  labs(
+    title = "Company Size vs Salary",
+    subtitle = "Salaries by Company Size",
+    caption = "Source: DsSalaries Dataset",
+    x = "Company Size",
+    y = "Salary in USD"
+  ) +
+  scale_fill_manual(
+    values = c("S" = "steelblue", "M" = "orange", "L" = "green") # Customize colors for each company size
+  ) +
+  theme_minimal()
+
+```
+(VI) HIGHEST PAYING COMPANY
+
+```{r}
+highest_paying_companies <- DsSalaries %>%
+  group_by(company_location) %>%
+  summarise(AverageSalary = mean(salary_in_usd, na.rm = TRUE)) %>%
+  arrange(desc(AverageSalary)) %>%
+  slice_head(n = 10)
+
+ggplot(data = highest_paying_companies) +
+  geom_bar(mapping = aes(x = reorder(company_location, -AverageSalary), 
+                         y = AverageSalary, 
+                         fill = company_location), stat = "identity") +
+  labs(
+    title = "Top 10 Highest Paying Companies",
+    x = "Company Location",
+    y = "Average Salary (USD)"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Optional: Rotate x-axis labels
+
+```
