@@ -426,21 +426,21 @@ ggplot(data = highest_paying_companies) +
 ## RECOMMENDATION
 From the analysis and visualizations, I was able to make some insightful recommendations based on the following observations
 
-** Recommendation 1:INCREASE FOCUS ON HIGH PAYING JOB 
-** Insight: Certain job titles such as "Data analytics lead" or "  Principal Data Engineer" have higher salaries by average than others.
-** Recommendation: If your organization wants to attract or retain talent in these roles, it might be beneficial to review salary structures for these positions to remain competitive. Additionally, consider offering professional development and upskilling opportunities to help employees grow into higher-paying roles.
-** Recommendation 2:TARGET SPECIFIC EXPERIENCE 
-** Insight: There is a pattern of salary variations based on experience levels.
-** Recommendation: For roles with a large number of entry-level employees (e.g., Junior Engineers), consider offering salary incentives or bonuses to retain talent. For senior-level positions, ensure compensation packages are aligned with the industry average to prevent losing experienced employees to competitors.
-** Recommendation 3: ENHANCE FOCUS ON REMOTE WORK OPPORTUNITY
-** Insight: The distribution of salaries by remote ratio reveals trends that might affect talent acquisition.
-** Recommendation: If remote work is positively correlated with higher salaries, consider offering more remote working opportunities or hybrid models for roles that can support such arrangements. It could help attract talent from different geographical locations, especially in high-demand positions.
-** Recommendation 4: ADJUST COMPANY BASED ON COMPANY LOCATION
-** Insight: Company location can have a strong impact on salary rates.
-** Recommendation: If your organization is based in areas where salaries are typically lower, consider introducing location-based salary adjustments or offering higher salaries in cities with a higher cost of living to compete with organizations in those regions.
-** Recommendation 5: TAILOR SALARY AND BENEFITS PACKAGES BY COMPANY SIZE 
-** Insight: Companies of different sizes offer different compensation and benefits packages.
-** Recommendation: Large companies may have more resources to offer competitive salaries and benefits. Small companies can focus on offering more personalized perks or career growth opportunities. Align the benefits with company size and resources to improve employee satisfaction.
+- Recommendation 1:INCREASE FOCUS ON HIGH PAYING JOB 
+- Insight: Certain job titles such as "Data analytics lead" or "  Principal Data Engineer" have higher salaries by average than others.
+- Recommendation: If your organization wants to attract or retain talent in these roles, it might be beneficial to review salary structures for these positions to remain competitive. Additionally, consider offering professional development and upskilling opportunities to help employees grow into higher-paying roles.
+- Recommendation 2:TARGET SPECIFIC EXPERIENCE 
+- Insight: There is a pattern of salary variations based on experience levels.
+- Recommendation: For roles with a large number of entry-level employees (e.g., Junior Engineers), consider offering salary incentives or bonuses to retain talent. For senior-level positions, ensure compensation packages are aligned with the industry average to prevent losing experienced employees to competitors.
+- Recommendation 3: ENHANCE FOCUS ON REMOTE WORK OPPORTUNITY
+- Insight: The distribution of salaries by remote ratio reveals trends that might affect talent acquisition.
+- Recommendation: If remote work is positively correlated with higher salaries, consider offering more remote working opportunities or hybrid models for roles that can support such arrangements. It could help attract talent from different geographical locations, especially in high-demand positions.
+- Recommendation 4: ADJUST COMPANY BASED ON COMPANY LOCATION
+- Insight: Company location can have a strong impact on salary rates.
+- Recommendation: If your organization is based in areas where salaries are typically lower, consider introducing location-based salary adjustments or offering higher salaries in cities with a higher cost of living to compete with organizations in those regions.
+- Recommendation 5: TAILOR SALARY AND BENEFITS PACKAGES BY COMPANY SIZE 
+- Insight: Companies of different sizes offer different compensation and benefits packages.
+- Recommendation: Large companies may have more resources to offer competitive salaries and benefits. Small companies can focus on offering more personalized perks or career growth opportunities. Align the benefits with company size and resources to improve employee satisfaction.
 
 ## 2. CONCLUSION
 The data analysis and visualizations provided valuable insights into various aspects of the salary landscape across different job titles, experience levels, company sizes, and remote work opportunities. 
