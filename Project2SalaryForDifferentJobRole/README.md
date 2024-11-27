@@ -40,6 +40,7 @@ The dataset was loaded into R using the `read.csv()` function:
 ```r
 DsSalaries <- read.csv("C:/Users/Administrator/Documents/ds_salaries.csv", header = TRUE, stringsAsFactors = FALSE)
 head(DsSalaries)
+```
 ## Removing the irrelevant column
 ```r
 DsSalaries <- DsSalaries[, -1]
