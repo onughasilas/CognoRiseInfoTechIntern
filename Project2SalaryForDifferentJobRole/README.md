@@ -41,14 +41,14 @@ The dataset was loaded into R using the `read.csv()` function:
 DsSalaries <- read.csv("C:/Users/Administrator/Documents/ds_salaries.csv", header = TRUE, stringsAsFactors = FALSE)
 head(DsSalaries)
 ```
-## Removing the irrelevant column
+## 2. Removing the irrelevant column
 ```r
 DsSalaries <- DsSalaries[, -1]
-STEP9: Checking to see if step8 worked
+## 3. Checking to see if step8 worked
 ```{r}
 head(DsSalaries)
 ```
-STEP10: inspecting the dataset
+## 4. Inspecting the dataset
 ```{r}
 head(DsSalaries)
 str(DsSalaries)
@@ -56,7 +56,7 @@ colnames(DsSalaries)
 names(DsSalaries)
 summary(DsSalaries)
 ```
-STEP11: Checking for missing value
+## 5. Checking for missing value
 ```{r}
 missing_value<- is.na(DsSalaries)
 missing_value
@@ -66,7 +66,7 @@ We can use this also,which will return the number of NA in each column, but ther
 colSums(is.na(DsSalaries))
 ```
 
-STEP12: Removing Duplicates
+## 6. Removing Duplicates
 ```{r}
 # Count duplicates before removing them
 sum(duplicated(DsSalaries))
@@ -77,13 +77,13 @@ sum(duplicated(DsSalaries))
 # there was no duplicate
 
 ```
-STEP13: Data Manipulation, filtering the dataset, i will find the highest earners
+## 7. Data Manipulation, filtering the dataset, i will find the highest earners
 ```{r}
 high_salary <- DsSalaries[DsSalaries$salary_in_usd > 200000, ]
 high_salary
 
 ```
-STEP14: Sorting salaries in ascending and descending other
+## 8. Sorting salaries in ascending and descending other
 ```{r}
 
 # Top salaries
@@ -106,7 +106,7 @@ top_10_salaries
 least_10_salaries
 
 ```
-STEP16: Creating a new column for experienced level
+## 9. Creating a new column for experienced level
 ```{r}
 
 DsSalaries <- DsSalaries %>%
@@ -121,7 +121,7 @@ head(DsSalaries)
 ```
 
 
-STEP17: Creating a new column for company_size 
+## 10. Creating a new column for company_size 
 
 ```{r}
 DsSalaries <- DsSalaries %>%
@@ -159,7 +159,7 @@ DsSalaries <- DsSalaries %>%
   ))
 head(DsSalaries)
 ```
-  STEP:18 AGREGATE
+  ## 11. AGREGATE
 ```{r}
 # To find the average salary for each job title, useful for identifying trends in DSC order
 avg_salary_by_job <- DsSalaries %>%
@@ -170,7 +170,7 @@ avg_salary_by_job
  # from the result the highest average earned salary are Data Analytics Lead	405000.00			
  # and Principal Data Engineer	328333.33	
 ```
-(II) Calculating the sum of salaries for each job title
+## (II) Calculating the sum of salaries for each job title
 
 ```{r}
 total_salary_by_job <- DsSalaries %>%
@@ -182,7 +182,7 @@ total_salary_by_job
 # andData Analyst	7387347	
 ```
 
-(III) TO find out how many employees are in each job title
+## (III) TO find out how many employees are in each job title
 
 ```{r}
  
@@ -195,7 +195,7 @@ employee_count_by_job
 # Data Analyst	82	
 
 ```
-(IV) To calculate the median salary for each job title
+## (IV) To calculate the median salary for each job title
 ```{r}
 median_salary_by_job <- DsSalaries %>%
     group_by(job_title) %>%
@@ -204,7 +204,7 @@ median_salary_by_job <- DsSalaries %>%
 median_salary_by_job
 # from the result the highest is still the data scientist lead
 ```
-(V) To find Minimum and Maximum Salary by Job Title
+## (V) To find Minimum and Maximum Salary by Job Title
 ```{r}
 min_max_salary_by_job <- DsSalaries %>%
     group_by(job_title) %>%
@@ -216,7 +216,7 @@ min_max_salary_by_job <- DsSalaries %>%
 min_max_salary_by_job
 
 ```
-(VI)To find standard Deviation of Salary by Job Title
+## (VI)To find standard Deviation of Salary by Job Title
 ```{r}
 salary_sd_by_job <- DsSalaries %>%
     group_by(job_title) %>%
@@ -224,7 +224,7 @@ salary_sd_by_job <- DsSalaries %>%
     arrange(desc(SalarySD))
 salary_sd_by_job
 ```
-(VII) Number  of Employees by Experience Level
+## (VII) Number  of Employees by Experience Level
 ```{r}
 employee_count_by_experience <- DsSalaries %>%
     group_by(experience_level) %>%
@@ -232,7 +232,7 @@ employee_count_by_experience <- DsSalaries %>%
     arrange(desc(EmployeeCount))
 employee_count_by_experience
 ```
-(XIII) Average Salary by Company Size
+## (XIII) Average Salary by Company Size
 ```{r}
 avg_salary_by_company_size <- DsSalaries %>%
     group_by(company_size) %>%
@@ -250,7 +250,7 @@ avg_salary_by_remote_ratio <- DsSalaries %>%
 avg_salary_by_remote_ratio
 
 ```
-(X) The highest Paying Companies
+## (X) The highest Paying Companies
 
 ```{r}
 highest_paying_companies <- DsSalaries %>%
@@ -261,7 +261,7 @@ highest_paying_companies
 ```
 
   
-STEP19: VISUALIZATION
+## 12. VISUALIZATION
 
 ```{r}
 install.packages("ggplot2")
@@ -299,7 +299,7 @@ ggplot(data = DsSalaries) +
 
 ```
 
-(I) PLOTING THE AVERAGE SALARY BY JOB TITLE
+## (I) PLOTING THE AVERAGE SALARY BY JOB TITLE
 ```{r}
 ggplot(data = avg_salary_by_job) +
   geom_bar(
@@ -317,7 +317,7 @@ ggplot(data = avg_salary_by_job) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Rotate x-axis labels
 
 ```
-(II) REMOT RATIO VS SALARY
+## (II) REMOT RATIO VS SALARY
 ```{r}
 ggplot(data = DsSalaries) +
   geom_boxplot(
@@ -334,7 +334,7 @@ ggplot(data = DsSalaries) +
 
 ```
 
-(III) Count of Employees by Job Title
+## (III) Count of Employees by Job Title
 ```{r}
 # 1. Count of Employees by Job Title
 employee_count_by_job <- DsSalaries %>%
@@ -350,7 +350,7 @@ ggplot(data = employee_count_by_job) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   theme(legend.position = "none") 
 ```
-(IV) MININUM AND MXIMUM SALARY BY JOB TITLE
+## (IV) MININUM AND MXIMUM SALARY BY JOB TITLE
 ```{r}
 min_max_salary_by_job <- DsSalaries %>%
   group_by(job_title) %>%
@@ -371,7 +371,7 @@ ggplot(data = min_max_salary_by_job) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
-(V) Count of Employees by Experience Level
+## (V) Count of Employees by Experience Level
 ```{r}
 employee_count_by_experience <- DsSalaries %>%
   count(experience_level, name = "EmployeeCount")
@@ -385,7 +385,7 @@ ggplot(data = employee_count_by_experience) +
   ) +
   theme_minimal() 
 ```
-(V) company size by salary
+## (V) company size by salary
 ```{r}
 ggplot(data = DsSalaries, aes(x = company_size, y = salary_in_usd, fill = company_size)) +
   geom_boxplot() +
@@ -402,7 +402,7 @@ ggplot(data = DsSalaries, aes(x = company_size, y = salary_in_usd, fill = compan
   theme_minimal()
 
 ```
-(VI) HIGHEST PAYING COMPANY
+## (VI) HIGHEST PAYING COMPANY
 
 ```{r}
 highest_paying_companies <- DsSalaries %>%
