@@ -21,7 +21,7 @@ The dataset, *Employee Salaries for different job roles*, contains job-related i
 [Download the Dataset from Kaggle](https://www.kaggle.com/datasets/inductiveanks/employee-salaries-for-different-job-roles)  
 ## ANALYSIS REPORT
 The full analysis, Results and visualization can be viewed here:
-[View Report Online](file:///C:/Users/Administrator/Documents/TECH%20DOC/cognorise/Employee-salaries3.html)
+[Employee Salaries Report (dox)](docs/Employee-salaries-report.pdf)
 
 ---
 
