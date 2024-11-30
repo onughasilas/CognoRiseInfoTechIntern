@@ -23,8 +23,10 @@ The dataset was imported using MySQL's Table Data Import Wizard.
  After importing the data, I ensured all column headers were reformatted for consistency:
 I replaced spaces with underscores and made all headers lowercase (e.g., Estimated Unemployment Rate (%) → estimated_unemployment_rate_percent). Below is the syntax with an explanation;
 
-### trying to see the headers
-```sql SELECT * FROM unemployment.unemployment_rate;
+
+```sql
+-- To see the headers
+SELECT * FROM unemployment.unemployment_rate;
 DESCRIBE unemployment.unemployment_rate;
 
 -- Changing the column names to unique type 
@@ -183,6 +185,12 @@ GROUP BY region_category
 ORDER BY avg_uemployed_rate DESC; -- North ewst has the highest unemployed rate
 
 
- --
-
+## STEP 3
+tep 4: Visualization in Tableau
+Created multiple visualizations to highlight key insights:
+Geographic Map: Showcased regional unemployment rates using longitude and latitude.
+Line Chart: Tracked unemployment trends over time.
+Bar Chart: Compared unemployment rates across regions.
+Heatmap: Visualized intensity of unemployment over different time periods.
+Histogram: Displayed the distribution of unemployment rates.
 
