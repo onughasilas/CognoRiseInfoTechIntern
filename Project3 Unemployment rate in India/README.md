@@ -4,6 +4,8 @@ As part of my internship at CongnoRise Infotech, I undertook a comprehensive ana
 ## TOOLS USED 
 - MySQL for data manipulation
 - Tableau for visualization.
+  Explore the interactive Tableau visualization for this project:  
+[View Tableau Dashboard](https://public.tableau.com/authoring/Enemploymentrateinindia1/Dashboard1#1)
 
 ## DATASET DESCRIPTION
 The dataset contains information on unemployment rates in different regions of India over time. It includes the following key columns:
@@ -213,7 +215,7 @@ Employment and Participation:
 ### Boost Labor Participation:
 - The government should encourage skill development and job creation programs, particularly in areas with lower labor participation rates.
 ### Continuous Monitoring:
-I government should implement systems for real-time data collection to better anticipate and address unemployment spikes.
+Government should implement systems for real-time data collection to better anticipate and address unemployment spikes.
 
 ## CHALLANGES I FACED
 ### Data Formatting Issues:
@@ -221,4 +223,6 @@ I government should implement systems for real-time data collection to better an
 - Changing header "Region" that appeared twice to Region_category
 ### Visualization Adjustments:
 I encountered little challenge in Ensuring geographic visualizations in Tableau accurately represented regions using longitude and latitude.
-
+Explore the full project documentation and code:
+Explore the interactive Tableau visualization for this project:  
+[View Tableau Dashboard](https://public.tableau.com/authoring/Enemploymentrateinindia1/Dashboard1#1)
