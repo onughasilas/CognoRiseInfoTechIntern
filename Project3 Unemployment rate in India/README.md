@@ -27,17 +27,17 @@ I replaced spaces with underscores and made all headers lowercase (e.g., Estimat
 ```sql
 -- To see the headers
 SELECT * FROM unemployment.unemployment_rate;
-DESCRIBE unemployment.unemployment_rate;
+DESCRIBE unemployment.unemployment_rate; ```
 
--- Changing the column names to unique type 
-ALTER TABLE unemployment.unemployment_rate
-CHANGE COLUMN `Region` region VARCHAR(255);
+- Changing the column names to unique type 
+```sql ALTER TABLE unemployment.unemployment_rate
+CHANGE COLUMN `Region` region VARCHAR(255); 
 
 ALTER TABLE unemployment.unemployment_rate
 CHANGE COLUMN `Date` date DATE;
 
 ALTER TABLE unemployment.unemployment_rate
-CHANGE COLUMN `Frequency` frequency VARCHAR(255);
+CHANGE COLUMN `Frequency` frequency VARCHAR(255); ```
 
 ALTER TABLE unemployment.unemployment_rate
 CHANGE COLUMN `Estimated Unemployment Rate (%)` estimated_unemployment_rate_percent DECIMAL(5,2);
