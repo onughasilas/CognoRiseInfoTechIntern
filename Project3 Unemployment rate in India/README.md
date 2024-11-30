@@ -29,9 +29,9 @@ I replaced spaces with underscores and made all headers lowercase (e.g., Estimat
 SELECT * FROM unemployment.unemployment_rate;
 DESCRIBE unemployment.unemployment_rate;
 ```
-```
-`` Changing the column names to unique type 
-```sql ALTER TABLE unemployment.unemployment_rate
+```sql
+ `` Changing the column names to unique type 
+ ALTER TABLE unemployment.unemployment_rate
 CHANGE COLUMN `Region` region VARCHAR(255);
 
 ALTER TABLE unemployment.unemployment_rate
